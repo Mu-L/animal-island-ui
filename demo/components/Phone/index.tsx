@@ -23,11 +23,19 @@ const PhoneDemo: React.FC = () => (
             <Phone />
         </div>
         <CodeBlock
-            code={`import { Phone } from 'animal-island-ui';
+            code={`import React from 'react';
+import { Phone } from 'animal-island-ui';
 
-const App = () => (
-    <Phone />
-);`}
+const App = () => {
+    return (
+        <div>
+            {/* 手机界面 */}
+            <Phone />
+        </div>
+    );
+};
+
+export default App;`}
         />
         <ApiTable rows={PHONE_API} />
     </div>

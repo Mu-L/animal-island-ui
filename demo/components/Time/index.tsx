@@ -14,11 +14,19 @@ const TimeDemo: React.FC = () => (
             <TimeComponent />
         </div>
         <CodeBlock
-            code={`import { Time } from 'animal-island-ui';
+            code={`import React from 'react';
+import { Time } from 'animal-island-ui';
 
-const App = () => (
-    <Time />
-);`}
+const App = () => {
+    return (
+        <div>
+            {/* 时间显示 */}
+            <Time />
+        </div>
+    );
+};
+
+export default App;`}
         />
         <ApiTable rows={TIME_API} />
     </div>
