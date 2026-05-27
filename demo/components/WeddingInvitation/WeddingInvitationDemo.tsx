@@ -102,7 +102,7 @@ const WeddingInvitationDemo: React.FC = () => {
                         maxWidth: 420,
                         minWidth: 300,
                         padding: 20,
-                        borderRadius: 24,
+                        borderRadius: 20,
                         background: '#F8F4E8',
                         display: 'flex',
                         flexDirection: 'column',
