@@ -113,7 +113,7 @@ export const prepareWeddingFontsForExport = (): Promise<string> => {
         } catch {
             // 容错
         }
-        console.info(`[WeddingInvitation] 字体已就绪：${dataUrlMap.size}/${WEDDING_FONTS.length}`);
+        console.warn(`[WeddingInvitation] 字体已就绪：${dataUrlMap.size}/${WEDDING_FONTS.length}`);
         return buildFontFaceCss((u) => dataUrlMap.get(u) ?? u);
     })();
     return exportPrepPromise;

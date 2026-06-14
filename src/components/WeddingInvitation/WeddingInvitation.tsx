@@ -148,10 +148,14 @@ const exportNodeAsPng = async (node: HTMLElement, filename: string, scale = 2): 
 
     // 临时关掉 mask-image —— 用动态 calc 定位的 mask 在导出管线里位置会偏，
     // 改成下面用 canvas globalCompositeOperation 手动打孔
+    // CSSStyleDeclaration 的 webkit* 前缀属性不在标准 lib 类型里，需扩展
+    const styleExt = node.style as CSSStyleDeclaration & {
+        webkitMaskImage?: string;
+    };
     const prevMask = node.style.maskImage;
-    const prevWebkitMask = (node.style as any).webkitMaskImage;
+    const prevWebkitMask = styleExt.webkitMaskImage;
     node.style.maskImage = 'none';
-    (node.style as any).webkitMaskImage = 'none';
+    styleExt.webkitMaskImage = 'none';
 
     // Chromium 在 SVG-as-image 渲染时不读 document.fonts，
     // 必须把带 data URL 的 @font-face 作为 <style> 子节点塞进截图节点
@@ -196,7 +200,7 @@ const exportNodeAsPng = async (node: HTMLElement, filename: string, scale = 2): 
     } finally {
         fontStyleEl.remove();
         node.style.maskImage = prevMask;
-        (node.style as any).webkitMaskImage = prevWebkitMask;
+        styleExt.webkitMaskImage = prevWebkitMask;
     }
 };
 
