@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './wallet.module.less';
 import { Icon } from '../Icon';
+import bagIcon from '../../assets/img/icons/items/item-022.png';
 
 export type WalletSize = 'small' | 'medium' | 'large';
 
@@ -51,7 +52,7 @@ export const Wallet: React.FC<WalletProps> = ({
                 </div>
             ) : (
                 <div className={styles.bagSlot} aria-hidden="true">
-                    <Icon item={22} size="80%" />
+                    <Icon src={bagIcon} size="80%" />
                 </div>
             )}
             <div className={styles.pill}>
