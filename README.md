@@ -171,6 +171,11 @@ npm run build:demo
     <img src="docs/img/Animal-Crossing-BGM-Player.png" alt="Animal-Crossing-BGM-Player" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
     <br/><a href="https://github.com/skyboooox/Animal-Crossing-Player">Animal Crossing BGM Player</a><br/><sub>ambience clock + hourly music</sub>
   </td>
+  <td align="center" width="33%">
+    <br/>
+    <img src="docs/img/animal-island-ui-taro-port.png" alt="animal-island-ui-taro-port" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
+    <br/><a href="https://github.com/Gospelion/animal-island-ui-taro-port">animal-island-ui-taro-port</a><br/><sub>Taro & WeChat Mini Program</sub>
+  </td>
 </tr>
 </table>
 
