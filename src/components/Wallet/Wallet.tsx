@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './wallet.module.less';
 import { Icon } from '../Icon';
-import bagIcon from '../../assets/img/icons/items/item-022.png';
+import bagIcon from './bagIcon';
 
 export type WalletSize = 'small' | 'medium' | 'large';
 
